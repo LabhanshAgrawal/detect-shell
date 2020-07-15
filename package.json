@@ -1,0 +1,29 @@
+{
+  "name": "detect-shell",
+  "version": "0.1.0",
+  "description": "detect shells available on the system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LabhanshAgrawal/detect-shell.git"
+  },
+  "keywords": [
+    "shell",
+    "sh",
+    "zsh",
+    "bash",
+    "cmd",
+    "cmd.exe",
+    "comspec",
+    "user"
+  ],
+  "author": "Labhansh Agrawal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LabhanshAgrawal/detect-shell/issues"
+  },
+  "homepage": "https://github.com/LabhanshAgrawal/detect-shell#readme"
+}
