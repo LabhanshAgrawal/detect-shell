@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/LabhanshAgrawal/detect-shell#readme",
   "devDependencies": {
-    "@types/node": "^14.0.23",
+    "@types/node": "^14.14.20",
     "typescript": "^3.9.6"
   },
   "optionalDependencies": {
