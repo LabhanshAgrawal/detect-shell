@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/LabhanshAgrawal/detect-shell/issues"
   },
-  "homepage": "https://github.com/LabhanshAgrawal/detect-shell#readme"
+  "homepage": "https://github.com/LabhanshAgrawal/detect-shell#readme",
+  "devDependencies": {
+    "typescript": "^3.9.6"
+  }
 }
