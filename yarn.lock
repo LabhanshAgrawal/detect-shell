@@ -2,6 +2,23 @@
 # yarn lockfile v1
 
 
+"@types/node@^14.0.23":
+  version "14.0.23"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.23.tgz#676fa0883450ed9da0bb24156213636290892806"
+  integrity sha512-Z4U8yDAl5TFkmYsZdFPdjeMa57NOvnaf1tljHzhouaPEp7LCj2JKkejpI1ODviIAQuW4CcQmxkQ77rnLsOOoKw==
+
+native-reg@0.3.4:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/native-reg/-/native-reg-0.3.4.tgz#764c75e96ef99dc134024c91be0a9c693d71658b"
+  integrity sha512-5U728JozXdfs4PGxxWpki4LBC6wi9itLYvi6BR/5wLKBmFC2fDbqMOct/CRk2vlMEWtI8MINnIDiEIEREV8DdQ==
+  dependencies:
+    node-gyp-build "^4.2.0"
+
+node-gyp-build@^4.2.0:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.2.2.tgz#3f44b65adaafd42fb6c3d81afd630e45c847eb66"
+  integrity sha512-Lqh7mrByWCM8Cf9UPqpeoVBBo5Ugx+RKu885GAzmLBVYjeywScxHXPGLa4JfYNZmcNGwzR0Glu5/9GaQZMFqyA==
+
 typescript@^3.9.6:
   version "3.9.6"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.6.tgz#8f3e0198a34c3ae17091b35571d3afd31999365a"
