@@ -2,10 +2,17 @@
   "name": "detect-shell",
   "version": "0.1.0",
   "description": "detect shells available on the system",
-  "main": "index.js",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\"",
+    "compile": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "prepare": "yarn run compile"
   },
+  "files": [
+    "lib/",
+    "src/"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LabhanshAgrawal/detect-shell.git"
@@ -27,6 +34,7 @@
   },
   "homepage": "https://github.com/LabhanshAgrawal/detect-shell#readme",
   "devDependencies": {
+    "@types/node": "14.14.20",
     "typescript": "4.1.3"
   }
 }
