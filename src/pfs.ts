@@ -1,10 +1,27 @@
-import fs from 'fs/promises';
+import fs from 'fs';
+import {promisify} from 'util';
 
-export const readFile = fs.readFile;
-export const stat = fs.stat;
-export const lstat = fs.lstat;
-export const readlink = fs.readlink;
-export const readdir = fs.readdir;
+export function readFile(path: string): Promise<Buffer>;
+export function readFile(path: string, encoding: string): Promise<string>;
+export function readFile(path: string, encoding?: string): Promise<Buffer | string> {
+  return promisify(fs.readFile)(path, encoding);
+}
+
+export function stat(path: string): Promise<fs.Stats> {
+  return promisify(fs.stat)(path);
+}
+
+export function lstat(path: string): Promise<fs.Stats> {
+  return promisify(fs.lstat)(path);
+}
+
+export function readlink(path: string): Promise<string> {
+  return promisify(fs.readlink)(path);
+}
+
+export async function readdir(path: string): Promise<string[]> {
+  return promisify(fs.readdir)(path);
+}
 
 export async function dirExists(path: string): Promise<boolean> {
   try {
