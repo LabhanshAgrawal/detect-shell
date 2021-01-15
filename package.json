@@ -2,15 +2,16 @@
   "name": "detect-shell",
   "version": "1.0.0",
   "description": "detect shells available on the system",
-  "main": "./lib/cjs/index.js",
-  "module": "./lib/esm/index.js",
+  "main": "./dist/index.js",
+  "module": "./esm_dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\"",
-    "compile": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "compile": "tsc -p tsconfig.json && tsc -p tsconfig-esm.json && denoify",
     "prepare": "yarn run compile"
   },
   "files": [
-    "lib/",
+    "dist/",
+    "esm_dist/",
     "src/"
   ],
   "repository": {
@@ -35,6 +36,7 @@
   "homepage": "https://github.com/LabhanshAgrawal/detect-shell#readme",
   "devDependencies": {
     "@types/node": "14.14.21",
+    "denoify": "0.6.4",
     "typescript": "4.1.3"
   }
 }

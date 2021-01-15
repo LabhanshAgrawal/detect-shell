@@ -1,8 +1,7 @@
-import {release} from 'os';
-import {normalize, basename} from 'path';
-import {platform as _platform, env} from 'process';
-import {readFile, stat, lstat} from './pfs';
-import {enumeratePowerShellInstallations} from './powershell';
+import {normalize, basename} from 'https://deno.land/std@0.83.0/node/path.ts';
+import {platform as _platform, env} from 'https://deno.land/std@0.83.0/node/process.ts';
+import {readFile, stat, lstat} from './pfs.ts';
+import {enumeratePowerShellInstallations} from './powershell.ts';
 
 interface IShellDefinition {
   label: string;
@@ -16,7 +15,7 @@ const platform = {
 };
 
 export function getWindowsBuildNumber(): number {
-  const osVersion = /(\d+)\.(\d+)\.(\d+)/g.exec(release());
+  const osVersion = /(\d+)\.(\d+)\.(\d+)/g.exec(Deno.osRelease());
   let buildNumber: number = 0;
   if (osVersion && osVersion.length === 4) {
     buildNumber = parseInt(osVersion[3]);

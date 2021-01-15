@@ -1,7 +1,6 @@
-import * as pfs from './pfs';
-import {homedir, arch as os_arch} from 'os';
-import {join} from 'path';
-import {env, arch as process_arch} from 'process';
+import * as pfs from './pfs.ts';
+import {join} from 'https://deno.land/std@0.83.0/node/path.ts';
+import {env, arch as process_arch} from 'https://deno.land/std@0.83.0/node/process.ts';
 
 const WindowsPowerShell64BitLabel = 'Windows PowerShell';
 const WindowsPowerShell32BitLabel = 'Windows PowerShell (x86)';
@@ -13,8 +12,8 @@ const PwshMsixRegex: RegExp = /^Microsoft.PowerShell_.*/;
 const PwshPreviewMsixRegex: RegExp = /^Microsoft.PowerShellPreview_.*/;
 
 // The platform details descriptor for the platform we're on
-const isProcess64Bit: boolean = process_arch === 'x64';
-const isOS64Bit: boolean = isProcess64Bit || os_arch() === 'x64';
+const isProcess64Bit: boolean = <string>process_arch === 'x64';
+const isOS64Bit: boolean = isProcess64Bit || <string>Deno.build.arch === 'x64';
 
 export interface IPowerShellExeDetails {
   readonly displayName: string;
@@ -193,7 +192,7 @@ async function findPSCoreMsix({
 }
 
 function findPSCoreDotnetGlobalTool(): IPossiblePowerShellExe {
-  const dotnetGlobalToolExePath: string = join(homedir(), '.dotnet', 'tools', 'pwsh.exe');
+  const dotnetGlobalToolExePath: string = join('', '.dotnet', 'tools', 'pwsh.exe');
 
   return new PossiblePowerShellExe(dotnetGlobalToolExePath, '.NET Core PowerShell Global Tool');
 }

@@ -1,16 +1,17 @@
-import {
-  readFile as _readFile,
-  stat as _stat,
-  lstat as _lstat,
-  readlink as _readlink,
-  readdir as _readdir,
-  Stats
-} from 'fs';
-import {promisify} from 'util';
+import { Buffer } from "https://deno.land/std@0.83.0/node/buffer.ts";
+import { readFile as _readFile, } from "https://deno.land/std@0.83.0/node/_fs/_fs_readFile.ts";
+import { stat as _stat, Stats } from "https://deno.land/std@0.83.0/node/_fs/_fs_stat.ts";
+import { lstat as _lstat } from "https://deno.land/std@0.83.0/node/_fs/_fs_lstat.ts";
+import { readlink as _readlink } from "https://deno.land/std@0.83.0/node/_fs/_fs_readlink.ts";
+import { readdir as _readdir } from "https://deno.land/std@0.83.0/node/_fs/_fs_readdir.ts";
+import { promisify } from "https://deno.land/std@0.83.0/node/util.ts";
 
 export function readFile(path: string): Promise<Buffer>;
 export function readFile(path: string, encoding: string): Promise<string>;
-export function readFile(path: string, encoding?: string): Promise<Buffer | string> {
+export function readFile(
+  path: string,
+  encoding?: string,
+): Promise<Buffer | string> {
   return promisify(_readFile)(path, encoding);
 }
 
