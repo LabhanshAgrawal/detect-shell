@@ -1,6 +1,6 @@
 {
   "name": "detect-shell",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "detect shells available on the system",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
