@@ -2,6 +2,8 @@
 
 Detect [shells](https://en.wikipedia.org/wiki/Shell_(computing)) available on the system (based on vscode's [implementation](https://github.com/microsoft/vscode/blob/master/src/vs/workbench/contrib/terminal/node/terminal.ts))
 
+[![npm](https://img.shields.io/npm/v/detect-shell?style=for-the-badge)](https://www.npmjs.com/package/detect-shell)
+
 ## Install
 
 ```
