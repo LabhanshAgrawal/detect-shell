@@ -4,6 +4,7 @@
   "description": "detect shells available on the system",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
+  "types": "./lib/cjs/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\"",
     "compile": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
